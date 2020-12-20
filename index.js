@@ -7,11 +7,11 @@ const fs = require('fs');
 inquirer.prompt(
 
  [
-     // Question 1 
+     // Question title of project
     {
         type: 'input',
         name: 'title',
-        message: 'What is the title of your project?',
+        message: 'What is the title of your project?(Please seperate words with "-")',
         validate: (value) => 
         {
             if (value) 
@@ -24,12 +24,12 @@ inquirer.prompt(
             }
         }
     },
-    // Question 2
-        {
-            type:'input',
-            name: 'installation',
-            message:'How is you application installed?',
-            validate: (value) => 
+    //Question : Description
+    {
+        type: 'input',
+        name: 'description',
+        message: 'Provide a description of your project:',
+        validate: (value) => 
         {
             if (value) 
             {
@@ -40,8 +40,26 @@ inquirer.prompt(
                 return 'A value is needed to continue';
             }
         }
+    },
+    // Question : Installation
+        {
+            type:'input',
+            name: 'installation',
+            message:'How is you application installed?',
+            validate: (value) => 
+            {
+                if (value) 
+                {
+                    return true;
+                }
+                else 
+                {
+                    return 'A value is needed to continue';
+                }
+            }
+            
         },
-        //Question 3
+        //Question : Instructions
         {
             type:'input',
             name: 'instructions',
@@ -58,11 +76,11 @@ inquirer.prompt(
             }
         }
         },
-        //Question 4
+        //Question : Credits
         {
             type:'input',
             name: 'credits',
-            message:'Any credits?',
+            message:'How can someone contribute?',
             validate: (value) => 
         {
             if (value) 
@@ -75,7 +93,7 @@ inquirer.prompt(
             }
         }
         },
-        //Question 5: List of license
+        //Question : List of license
         {
             type:'list',
             name: 'license',
@@ -93,11 +111,82 @@ inquirer.prompt(
             }
         }
         },
-        //Question 6
+
+        //Question : Usage
+        {
+            type:'input',
+            name: 'usage',
+            message:'Provide any instructions or examples of your project in use:' ,
+            validate: (value) => 
+        {
+            if (value) 
+            {
+                return true;
+            }
+            else 
+            {
+                return 'A value is needed to continue';
+            }
+        }
+        },
+
+        //Question : Test
+        {
+            type:'input',
+            name: 'test',
+            message:'Provide any written test for your application (if applicable)',
+            validate: (value) => 
+        {
+            if (value) 
+            {
+                return true;
+            }
+            else 
+            {
+                return 'A value is needed to continue';
+            }
+        }
+        },
+
+        //Question : Questions
+        {
+            type:'input',
+            name: 'questions',
+            message:'Provide the best way to contact you if someone has questions:',
+            validate: (value) => 
+        {
+            if (value) 
+            {
+                return true;
+            }
+            else 
+            {
+                return 'A value is needed to continue';
+            }
+        }
+        },
+        //Question : github
         {
             type:'input',
             name: 'git',
             message:'What is your GitHub username?',
+            validate: (value) => 
+        {
+            if (value) 
+            {
+                return true;
+            }
+            else 
+            {
+                return 'A value is needed to continue';
+            }
+        }
+        },
+        //Question :linkden
+        {
+            type:'input',
+            name: 'linkden',
+            message:'What is your Linkedin profile name?',
             validate: (value) => 
         {
             if (value) 
@@ -131,42 +220,51 @@ inquirer.prompt(
     
 ]).then (({
     title,
+    description,
     installation,
     instructions,
     credits,
     license,
+    questions,
     git,
     linkden,
     usage,
-    contribution,
+    test,
     email,
 })=>{
     // Readme template
     const template = `
 # ${title}
-    
+application is covered under${license}
+
+## Description
+${description}
+
+Table of Contents:
 * [Installation](#installation)
 * [Usage](#usage)
 * [contribution](#contribution)
-* [Credits](#credits)
 * [License](#license)
-* Installation
+
+## Installation
  ${installation}
  ## Usage
  ${usage}
  ## Contribution
- ${contribution}
- ### instructions
- ${instructions}
- ## Credits
  ${credits}
+ ## Test
+ ${test}
+ ## instructions
+ ${instructions}
  ## License
+ This application is covered under the following license
  ${license}
 
- # Contact
- * GitHub: ${git}
+ # Questions
+ * GitHub: https://github.com/${git}
  * Linkedin: ${linkden}
  * E-mail: ${email}
+ * Contact instructions: ${questions}
     `;
     
     // Que function to write new ReadMe file
