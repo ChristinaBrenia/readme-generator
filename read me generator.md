@@ -1,5 +1,5 @@
 
-    # test
+    # Read me Generator
     
     * [Installation] (#installation)
     * [Usage] (#usage)
@@ -7,20 +7,20 @@
     * [Credits] (#credits)
     * [License] (#license)
     * Installation
-     test
+     Installed with node and inquirer
      ## Usage
      undefined
      ## Contribution
      undefined
      ### instructions
-     test
+     download in inqurer and node to run in command line
      ## Credits
      no
      ## License
      N/A
 
      # Contact
-     * GitHub: test
+     * GitHub: christinabrenia
      * Linkedin: undefined
-     * E-mail: test
+     * E-mail: cbrenia@hotmail.com
     
