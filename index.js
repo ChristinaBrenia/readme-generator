@@ -178,7 +178,7 @@ inquirer.prompt(
 function writeToFile(fileName, data) {
 
     //I don't understand this part.. will have to re-visit this in the future
-fs.writeFile(`./${fileName.toLowerCase().split(' ').join(' ')}.nd`, data, (err)=>
+fs.writeFile(`./${fileName.toLowerCase().split(' ').join(' ')}.md`, data, (err)=>
     {
         if(err) {
             console.log(err)
