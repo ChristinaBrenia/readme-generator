@@ -1,7 +1,135 @@
 // TODO: Include packages needed for this application
 
+const inquirer = require("inquirer");
+const fs = require('fs');
+
 // TODO: Create an array of questions for user input
-const questions = [];
+inquirer.prompt(
+
+ [
+     // Question 1 
+    {
+        type: 'input',
+        name: 'title',
+        message: 'What is the title of your project?',
+        validate: (value) => 
+        {
+            if (value) 
+            {
+                return true;
+            }
+            else 
+            {
+                return 'A value is needed to continue';
+            }
+        }
+    },
+    // Question 2
+        {
+            type:'input',
+            name: 'installation',
+            message:'How is you application installed?',
+            validate: (value) => 
+        {
+            if (value) 
+            {
+                return true;
+            }
+            else 
+            {
+                return 'A value is needed to continue';
+            }
+        }
+        },
+        //Question 3
+        {
+            type:'input',
+            name: 'instructions',
+            message:'Provide any instructions needed:',
+            validate: (value) => 
+        {
+            if (value) 
+            {
+                return true;
+            }
+            else 
+            {
+                return 'A value is needed to continue';
+            }
+        }
+        },
+        //Question 4
+        {
+            type:'input',
+            name: 'credits',
+            message:'Any credits?',
+            validate: (value) => 
+        {
+            if (value) 
+            {
+                return true;
+            }
+            else 
+            {
+                return 'A value is needed to continue';
+            }
+        }
+        },
+        //Question 5: List of license
+        {
+            type:'list',
+            name: 'license',
+            message:'What license did you use?',
+            choices: ['The MIT License', 'The GPL License', 'Apache license', 'GNU license', 'N/A'],
+            validate: (value) => 
+        {
+            if (value) 
+            {
+                return true;
+            }
+            else 
+            {
+                return 'A value is needed to continue';
+            }
+        }
+        },
+        //Question 6
+        {
+            type:'input',
+            name: 'git',
+            message:'What is your GitHub username?',
+            validate: (value) => 
+        {
+            if (value) 
+            {
+                return true;
+            }
+            else 
+            {
+                return 'A value is needed to continue';
+            }
+        }
+        },
+        //Question 7
+        {
+            type:'input',
+            name: 'email',
+            message:'What is your email address?',
+            validate: (value) => 
+        {
+            if (value) 
+            {
+                return true;
+            }
+            else 
+            {
+                return 'A value is needed to continue';
+            }
+        }
+        },
+        
+    
+]);
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
