@@ -126,10 +126,51 @@ inquirer.prompt(
                 return 'A value is needed to continue';
             }
         }
-        },
+    }
         
     
-]);
+]).then (({
+    title,
+    installation,
+    instructions,
+    credits,
+    license,
+    git,
+    linkden,
+    usage,
+    contribution,
+    email,
+})=>{
+    // Readme template
+    const template = `
+    # ${title}
+    
+    * [Installation] (#installation)
+    * [Usage] (#usage)
+    * [contribution] (#contribution)
+    * [Credits] (#credits)
+    * [License] (#license)
+    * Installation
+     ${installation}
+     ## Usage
+     ${usage}
+     ## Contribution
+     ${contribution}
+     ### instructions
+     ${instructions}
+     ## Credits
+     ${credits}
+     ## License
+     ${license}
+
+     # Contact
+     * GitHub: ${git}
+     * Linkedin: ${linkden}
+     * E-mail: ${email}
+    `;
+}
+
+)
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
