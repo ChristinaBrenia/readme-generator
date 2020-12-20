@@ -143,30 +143,30 @@ inquirer.prompt(
 })=>{
     // Readme template
     const template = `
-    # ${title}
+# ${title}
     
-    * [Installation] (#installation)
-    * [Usage] (#usage)
-    * [contribution] (#contribution)
-    * [Credits] (#credits)
-    * [License] (#license)
-    * Installation
-     ${installation}
-     ## Usage
-     ${usage}
-     ## Contribution
-     ${contribution}
-     ### instructions
-     ${instructions}
-     ## Credits
-     ${credits}
-     ## License
-     ${license}
+* [Installation] (#installation)
+* [Usage] (#usage)
+* [contribution] (#contribution)
+* [Credits] (#credits)
+* [License] (#license)
+* Installation
+ ${installation}
+ ## Usage
+ ${usage}
+ ## Contribution
+ ${contribution}
+ ### instructions
+ ${instructions}
+ ## Credits
+ ${credits}
+ ## License
+ ${license}
 
-     # Contact
-     * GitHub: ${git}
-     * Linkedin: ${linkden}
-     * E-mail: ${email}
+ # Contact
+ * GitHub: ${git}
+ * Linkedin: ${linkden}
+ * E-mail: ${email}
     `;
     
     // Que function to write new ReadMe file
