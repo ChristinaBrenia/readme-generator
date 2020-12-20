@@ -14,10 +14,9 @@ Table of Contents:
 ## Installation
  The application is installed to the local machine and uses node. Node must be installed to use the application. 
  ## Usage
-Video 1:
-https://drive.google.com/file/d/1lPWCle5nbzXuJsQ6xc9lJjtFdFzn_Wvv/view
-Video 2:
-https://drive.google.com/file/d/1ziXGhpwJTnyx7GkMedii8rkNLkluHkMx/view
+Video 1: https://drive.google.com/file/d/1lPWCle5nbzXuJsQ6xc9lJjtFdFzn_Wvv/view
+
+Video 2: https://drive.google.com/file/d/1ziXGhpwJTnyx7GkMedii8rkNLkluHkMx/view
  ## Contribution
  To contrubite, download the file from the repo and make improvements as needed.
  ## Test
