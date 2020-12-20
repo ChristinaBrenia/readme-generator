@@ -188,8 +188,8 @@ fs.writeFile(`./${fileName.toLowerCase().split(' ').join(' ')}.nd`, data, (err)=
 
 }
 
-// TODO: Create a function to initialize app
-function init() {}
+// // TODO: Create a function to initialize app
+// function init() {}
 
-// Function call to initialize app
-init();
+// // Function call to initialize app
+// init();
