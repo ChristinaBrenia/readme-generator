@@ -168,12 +168,25 @@ inquirer.prompt(
      * Linkedin: ${linkden}
      * E-mail: ${email}
     `;
+    
+    // Que function to write new ReadMe file
+    writeToFile(title,template);
 }
-
 )
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+
+    //I don't understand this part.. will have to re-visit this in the future
+fs.writeFile(`./${fileName.toLowerCase().split(' ').join(' ')}.nd`, data, (err)=>
+    {
+        if(err) {
+            console.log(err)
+        }
+        console.log('Your ReadMe file has been generated');
+    })
+
+}
 
 // TODO: Create a function to initialize app
 function init() {}
