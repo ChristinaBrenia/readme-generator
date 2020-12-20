@@ -145,11 +145,11 @@ inquirer.prompt(
     const template = `
 # ${title}
     
-* [Installation] (#installation)
-* [Usage] (#usage)
-* [contribution] (#contribution)
-* [Credits] (#credits)
-* [License] (#license)
+* [Installation](#installation)
+* [Usage](#usage)
+* [contribution](#contribution)
+* [Credits](#credits)
+* [License](#license)
 * Installation
  ${installation}
  ## Usage

@@ -25,6 +25,7 @@ If your README is very long, add a table of contents to make it easy for users t
 * [Usage](#usage)
 * [Credits](#credits)
 * [License](#license)
+* [Badges] (#badges)
 
 
 ## Installation
